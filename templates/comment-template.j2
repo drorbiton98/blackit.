@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link href="{{ url_for('static', filename='comment.css') }}" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="">
+    </head>
+
+    <body>
+        <div>
+            <p class='top-black-bar'>This website might use cookies, i don't know yet.. I mean their delicious tough...</p>
+        </div>
+
+        <header>
+            <div class='header-top'>
+                <div class='logo'>
+                    <h1>Blackit.</h1>
+                    <h2>It's like Reddit, but cheaper.</h2>
+                </div>
+
+                <div class='log'>
+                    <a class='log-button' href="{{ url_for('sort_rating') }}">
+                        <p class='log-button-text'>Homepage</p>
+                    </a>
+
+                    <a class='log-button' href="{{ url_for('logout') }}">
+                        <p class='log-button-text'>Sign Out</p>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div>
+                <form action="" method="POST">
+                    
+                    <div class='comment-form'>
+                        <div class='section'>
+                            <div class='rating-select'>
+                                <input type="radio" id="1" name="rating" value="1">
+                                <label for="1"> Like</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="2" name="rating" value="2">
+                                <label for="2"> Dislike</label>
+                            </div>
+                        </div>
+                        <div class='content'>
+                            <label for="content">Content:</label>
+                            <textarea class='text-input' type="text" id="content" name="content"></textarea>
+                        </div>
+
+                        <div class='submit-button'>
+                            <input class="submit" type="submit" value="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

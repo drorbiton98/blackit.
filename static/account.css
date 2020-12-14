@@ -1,0 +1,80 @@
+html {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    color: white;
+    background-color: rgb(20, 20, 20);
+}
+
+header, main {
+    margin: 0 3em 0 3em;
+}
+
+/* Header starts here: */
+
+.top-black-bar {
+    background-color: black;
+    margin: 0;
+    text-align: center;
+}
+
+.header-top {
+    justify-content: space-between;
+    display: flex;
+}
+
+.sort-options {
+    display: flex;
+    background-color: black;
+}
+
+.sort-buttons {
+    margin: 0;
+    width: 50%;
+    text-align: center;
+}
+
+.log {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.log-button {
+    width: 10em;
+    height: 5em;
+    margin: 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px black;
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+}
+
+a.log-button {
+    text-decoration: none;
+}
+
+p.log-button-text {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+.log-button:hover {
+    background-color: rgb(65, 65, 65);
+    cursor: pointer;
+}
+
+
+/* Main starts here: */
+
+main {
+    align-items: center;
+}

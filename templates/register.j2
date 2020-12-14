@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link href="{{ url_for('static', filename='register.css') }}" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="">
+    </head>
+
+    <body>
+        <div>
+            <p class='top-black-bar'>This website might use cookies, i don't know yet.. I mean their delicious tough...</p>
+        </div>
+
+        <header>
+            <div class='header-top'>
+                <div class='logo'>
+                    <h1>Blackit.</h1>
+                    <h2>It's like Reddit, but cheaper.</h2>
+                </div>
+            </div>
+        </header>
+
+        <div class='banner'>
+            <p class='banner-text'>Welcome back to blackit.</p>
+        </div>
+
+        <main>
+            <div>
+                <form action="" method="POST">
+                    
+                    <div class='register-form'>
+                        <div>
+                            <label for="username">Username:</label>
+                            <input class='text-input' type="text" id="username" name="username">
+                        </div>
+
+                        <div>
+                            <label for="email">Email:</label>
+                            <input class='text-input' type="text" id="email" name="email">
+                        </div>
+
+                        <div>
+                            <label for="password">Password:</label>
+                            <input class='text-input' type="text" id="password" name="password">
+                        </div>
+                    </div>
+
+                    <div class='register-button'>
+                        <input class="submit" type="submit" value="register">
+                    </div>
+
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

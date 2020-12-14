@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link href="{{ url_for('static', filename='post.css') }}" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="">
+    </head>
+
+    <body>
+        <div>
+            <p class='top-black-bar'>This website might use cookies, i don't know yet.. I mean their delicious tough...</p>
+        </div>
+
+        <header>
+            <div class='header-top'>
+                <div class='logo'>
+                    <h1>Blackit.</h1>
+                    <h2>It's like Reddit, but cheaper.</h2>
+                </div>
+
+                <div class='log'>
+                    <a class='log-button' href="{{ url_for('sort_rating') }}">
+                        <p class='log-button-text'>Home</p>
+                    </a>
+                    <a class='log-button' href="{{ url_for('comment_post', post_id=post.id) }}">
+                        <p class='log-button-text'>Comment</p>
+                    </a>
+                    <a class='log-button' href="{{ url_for('logout') }}">
+                        <p class='log-button-text'>Sign Out</p>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class='banner'>
+            <p class='banner-text'>{{ post.title }}</p>
+        </div>
+
+        <main>
+            <div class='post'>
+                <div class='credit'>
+                    <p class='author'>Author: {{ post.author }}</p>
+                    <p class='date'>Date published: {{ post.date_published }}</p>
+                </div>
+                
+                <div class='title'>
+                    <p class='title-text'>{{ post.title }}</p>
+                </div>
+
+                <div class='content'>
+                    <p>{{ post.content }}</p>
+                </div>
+
+                <div class='rating'>
+                    <p class='dislikes'>{{ post.dislikes }}</p>
+                    <p class='rating-percent'>{{ rating }}</p>
+                    <p class='likes'>{{ post.likes }}</p>
+                </div>
+            </div>
+
+            <div class='comments'>
+
+                <div class='comment-header'>
+                    <div class='comment-user'>
+                        <p class='comment-username'>User-id</p>
+                    </div>
+
+                    <div class='comment-content'>
+                        <p class='comment-content-text'>content</p>
+                    </div>
+
+                    <div class='comment-vote'>
+                        <p>vote-rate</p>
+                    </div>
+                </div>
+
+                {% for comment in comments %}
+                    <div class='comment'>
+                        <div class='comment-user'>
+                            <p class='comment-username'>{{ comment.author }}</p>
+                        </div>
+
+                        <div class='comment-content'>
+                            <p class='comment-content-text'>{{ comment.content }}</p>
+                        </div>
+
+                        <div class='comment-vote'>
+                            <p>{{ comment.rating }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link href="{{ url_for('static', filename='home.css') }}" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="">
+        {{ flask_util_js.js }}
+    </head>
+
+    <body>
+        <div>
+            <p class='top-black-bar'>This website might use cookies, i don't know yet.. I mean their delicious tough...</p>
+        </div>
+
+        <header>
+            <div class='header-top'>
+                <div class='logo'>
+                    <h1>Blackit.</h1>
+                    <h2>It's like Reddit, but cheaper.</h2>
+                </div>
+
+                <div class='log'>
+                    <a class='log-button' href="{{ url_for('account', user_id=current_user.id) }}">
+                        <p class='log-button-text'>Account</p>
+                    </a>
+
+                    <a class='log-button' href="{{ url_for('write') }}">
+                        <p class='log-button-text'>Post</p>
+                    </a>
+
+                    <a class='log-button' href="{{ url_for('logout') }}">
+                        <p class='log-button-text'>Sign Out</p>
+                    </a>
+                    
+                </div>
+            </div>
+        </header>
+
+        <div class='sort-options'>
+            <a class='sort-buttons' href="{{ url_for('sort_rating') }}">
+                <p class='sort-date'>Sort by Date</p>
+            </a>
+            <a class='sort-buttons' href="{{url_for('sort_date') }}">
+                <p class='sort-rating'>Sort by Popularity</p>
+            </a>
+        </div>
+
+        <main>
+            <div class='hostname' id='hostname' href="{{ path }}"></div>
+            <div class='posts' id='posts'></div>
+            <div class='pagenumbers' id=pagenumbers></div>
+            <script src="{{ url_for('static', filename='main.js') }}"></script>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link href="{{ url_for('static', filename='incorrect.css') }}" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="">
+    </head>
+
+    <body>
+        <div>
+            <p class='top-black-bar'>This website might use cookies, i don't know yet.. I mean their delicious tough...</p>
+        </div>
+
+        <header>
+            <div class='header-top'>
+                <div class='logo'>
+                    <h1>Blackit.</h1>
+                    <h2>It's like Reddit, but cheaper.</h2>
+                </div>
+            </div>
+        </header>
+
+        <div class='banner'>
+            <p class='banner-text'>Welcome back to blackit.</p>
+        </div>
+
+        <main>
+            <div class='select-buttons'>
+                <a class='login' href="{{ url_for('index') }}">
+                    <p class='login=text'>Try again</p>
+                </a>
+
+                <a class='register' href="{{ url_for('register') }}">
+                    <p class='register-text'>Register</p>
+                </a>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link href="{{ url_for('static', filename='account.css') }}" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="">
+    </head>
+
+    <body>
+        <div>
+            <p class='top-black-bar'>This website might use cookies, i don't know yet.. I mean their delicious tough...</p>
+        </div>
+
+        <header>
+            <div class='header-top'>
+                <div class='logo'>
+                    <h1>Blackit.</h1>
+                    <h2>It's like Reddit, but cheaper.</h2>
+                </div>
+
+                <div class='log'>
+                    <a class='log-button' href="{{ url_for('write') }}">
+                        <p class='log-button-text'>Post</p>
+                    </a>
+                    <a class='log-button' href="{{ url_for('sort_rating') }}">
+                        <p class='log-button-text'>Homepage</p>
+                    </a>
+                    <a class='log-button' href="{{ url_for('logout') }}">
+                        <p class='log-button-text'>Sign Out</p>
+                    </a>
+                    
+                </div>
+            </div>
+        </header>
+
+        <div class='banner'>
+            <p class='banner-text'>{{ user_id }}</p>
+        </div>
+
+        <main>
+            <div class='delete-button'>
+                <form action="" method="POST">
+                <input class="submit" type="submit" value="DELETE USER">
+            </div>
+        </main>
+    </body>
+</html>

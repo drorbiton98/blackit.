@@ -1,0 +1,38 @@
+html {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    color: white;
+    background-color: rgb(20, 20, 20);
+}
+
+header, main {
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+/* Header starts here: */
+
+.top-black-bar, .banner-text {
+    background-color: black;
+    margin: 0;
+    text-align: center;
+}
+
+.select-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.login, .register {
+    text-decoration: none;
+    border-radius: 10px;
+    width: 10em;
+    height: 10em;
+    
+}
