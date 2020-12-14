@@ -1,2 +1,2 @@
 web: gunicorn app:app
-TIMEOUT=120
+TIMEOUT=600
