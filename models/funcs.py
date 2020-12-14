@@ -12,7 +12,7 @@ postgre_username = os.getenv("POSTGRE_USERNAME")
 postgre_password = os.getenv("POSTGRE_PASS")
 
 
-engine = create_engine(f"postgresql://{postgre_username}:{postgre_password}@blackitreddit.herokuapp.com, echo=False") #database
+engine = create_engine(f"postgresql://{postgre_username}:{postgre_password}@blackitreddit.herokuapp.com/blackit, echo=False") #database
 Session = sessionmaker(bind=engine)
 session = Session()
 
